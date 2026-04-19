@@ -4,6 +4,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
+import androidx.navigation.NavController
 import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.ui.NavDisplay
 import com.example.appservicios.modelos.ServicioData
@@ -14,7 +15,7 @@ data object ServicioScreen
 data class ResumenScreen(val data: ServicioData)
 
 @Composable
-fun Navegar() {
+fun Navegar(navController: NavController) {
     val backStack = remember { mutableStateListOf<Any>(ServicioScreen) }
 
     NavDisplay(
@@ -27,9 +28,7 @@ fun Navegar() {
                 }
 
                 is ResumenScreen -> NavEntry(key) {
-                    Resumen(key.data
-
-                    )
+                    Resumen(key.data, onBack = { backStack.removeLastOrNull() })
                 }
                 else -> NavEntry(Unit) { Text("Unknown route") }
             }

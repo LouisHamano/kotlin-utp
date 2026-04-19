@@ -4,7 +4,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -16,7 +19,7 @@ import androidx.compose.ui.unit.sp
 import com.example.appservicios.modelos.ServicioData
 
 @Composable
-fun Resumen(info: ServicioData) {
+fun Resumen(info: ServicioData, onBack: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -25,7 +28,7 @@ fun Resumen(info: ServicioData) {
         Text(
             text = "RESUMEN DEL SERVICIO",
             modifier = Modifier
-                .fillMaxSize(),
+                .fillMaxWidth(),
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
             fontSize = 18.sp
@@ -38,6 +41,29 @@ fun Resumen(info: ServicioData) {
             modifier = Modifier
         ) { }
 
-        Text(text = "SERVICIO : ${info.servicio}")
+        Text(text = "Cliente : ${info.cliente}")
+        Text(text = "Servicio : ${info.servicio}")
+        Text(text = "DNI : ${info.dni}")
+        Text(text = "Costo Servicios : ${info.costo_servicio}")
+        Text(text = "Costo Instalación : ${info.costo_instalacion}")
+        Text(text = "Descuento : ${info.descuento}")
+        Text(text = "Total Pagar : ${info.total}")
+
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Button(
+                modifier = Modifier.padding(top = 100.dp),
+                shape = RoundedCornerShape(size = 0.dp),
+                onClick = {
+                    onBack()
+                }
+            ) {
+                Text(text = "Volver")
+            }
+        }
+
+
     }
 }
