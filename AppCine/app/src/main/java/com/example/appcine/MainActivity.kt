@@ -1,4 +1,4 @@
-package com.example.appservicios
+package com.example.appcine
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,8 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.appservicios.navegacion.Navegar
-import com.example.appservicios.ui.theme.AppServiciosTheme
+import com.example.appcine.navegacion.Navegar
+import com.example.appcine.ui.theme.AppCineTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
