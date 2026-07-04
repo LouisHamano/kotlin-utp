@@ -119,6 +119,9 @@ fun Servicio(irResumen:(ServicioData)-> Unit) {
                         onClick = {
                             posService = index
                             nomService = producto.nombre
+                            costo_servicio = producto.precio
+                            costo_instalacion = producto.instalacion
+                            descuento = producto.descuento
                         }
                     )
                     Text(text = producto.nombre)
