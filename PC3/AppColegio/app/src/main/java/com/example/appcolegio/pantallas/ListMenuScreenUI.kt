@@ -65,7 +65,7 @@ fun ListaMenu(addMenu:()->Unit, editMenu:(Int)->Unit){
 
     LaunchedEffect(true){
         scope.launch {
-            lista= RetrofitCliente.menuApi.listarMenus()
+            lista= RetrofitCliente.menuApi.listarMenus().data
         }
     }
 
@@ -233,7 +233,7 @@ fun ListaMenu(addMenu:()->Unit, editMenu:(Int)->Unit){
                             RetrofitCliente.menuApi.
                                         eliminarPorCodigo(menuActual!!.codigo)
                             lista= RetrofitCliente.menuApi.
-                                            listarMenus()
+                                            listarMenus().data
                             mostrarDialogo=false
                         }
                     }
