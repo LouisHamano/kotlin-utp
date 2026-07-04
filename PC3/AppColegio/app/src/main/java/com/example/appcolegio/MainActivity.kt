@@ -12,8 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.appcolegio.navegacion.Navegar
-import com.example.appcolegio.pantallas.AdicionarDocente
-import com.example.appcolegio.pantallas.ListaDocente
 import com.example.appcolegio.ui.theme.AppColegioTheme
 
 class MainActivity : ComponentActivity() {

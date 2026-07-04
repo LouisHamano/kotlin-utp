@@ -45,8 +45,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.example.appcolegio.local.AppDatabase
-import com.example.appcolegio.local.entidades.Docente
 import com.example.appcolegio.retrofit.RetrofitCliente
 import com.example.appcolegio.retrofit.entidades.Menu
 import kotlinx.coroutines.launch

@@ -37,8 +37,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.example.appcolegio.local.AppDatabase
-import com.example.appcolegio.local.entidades.Docente
 import com.example.appcolegio.retrofit.CloudinaryClient
 import com.example.appcolegio.retrofit.RetrofitCliente
 import com.example.appcolegio.retrofit.entidades.Menu
